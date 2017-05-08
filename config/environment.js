@@ -1,11 +1,20 @@
 /* eslint-env node */
 
-module.exports = function(environment) {
-  var ENV = {
+module.exports = function (environment) {
+  let ENV = {
+    firebase: {
+      apiKey: "AIzaSyCT1AN-oQLD2Utm7ddQmZ0ueTpS7FId4ok",
+      authDomain: "launchlists.firebaseapp.com",
+      databaseURL: "https://launchlists.firebaseio.com",
+      projectId: "launchlists",
+      storageBucket: "launchlists.appspot.com",
+      messagingSenderId: "944606381435"
+    },
     modulePrefix: 'launchlist',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
