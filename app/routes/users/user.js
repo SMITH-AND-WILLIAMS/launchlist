@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model(param){
-        return this.store.findRecord('list',param.user_id)
+        console.log(this.store.findRecord('user',param.user_id))
+        
+        return Ember.RSVP.hash({
+            user: this.store.findRecord('user',param.user_id),
+            lists: this.store.findRecord('list',param.user_id)
+          });
     }
 });
