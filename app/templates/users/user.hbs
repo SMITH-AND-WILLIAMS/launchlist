@@ -1,2 +1,9 @@
+
+<h3>{{model.name}}</h3>
+{{#each model.lists as |list|}}
+<ul>
+    <li>{{#link-to 'users.user.list' list.id}}<button>{{list.name}}</button>{{/link-to}}</li>
+</ul>
+{{/each}}
+<hr>
 {{outlet}}
-{{log model.user}}

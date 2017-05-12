@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    name:DS.attr('string'), 
-    done:DS.attr('boolean'),
-    tasks:DS.attr(),
+    name:DS.attr('string'),
+    user:DS.belongsTo('user',{async:true}),
+    tasks:DS.hasMany('task',{async:true})
 });
