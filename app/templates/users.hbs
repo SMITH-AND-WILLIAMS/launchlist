@@ -1,6 +1,6 @@
 <h1>Users list</h1>
 <ul>
-{{#each model.users as |user|}}
+{{#each model as |user|}}
 <li>{{#link-to 'users.user' user.id}}<button>Show {{user.name}}</button>{{/link-to}}</li>
 {{/each}}
 </ul>
