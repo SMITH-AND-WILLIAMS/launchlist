@@ -4,11 +4,11 @@
     <p class="formLoginIntro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cupiditate accusantium praesentium eveniet.</p>
     <p class="formLoginField formLoginEmail">
         <label for="email">Email:</label>
-        <input type="email" id="email" value={{email}}>
+        {{one-way-input type="email" id="email_input" update=(action (mut email))}}
     </p>
     <p class="formLoginField formLoginPassword">
         <label for="password">Password:</label>
-        <input type="password" id="password" value={{value}} oninput={{mut value}}>
+        {{one-way-input type="password" id="password_input" update=(action (mut password))}}
     </p>
     <p class="formLoginSubmit">
         <input 
