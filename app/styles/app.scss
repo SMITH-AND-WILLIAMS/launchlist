@@ -167,3 +167,22 @@ left:-5px;
     }
 
 }
+.pull-right{
+    float: right;
+}
+#nav-bar{
+    color:white;
+    a, a:visited{
+        color:white;
+    }
+    a:hover{
+        color:red;
+    }
+
+}
+.alert-danger{
+    color:red;
+}
+.alert-success{
+    color:green;
+}
