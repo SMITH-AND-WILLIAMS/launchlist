@@ -23,6 +23,8 @@ export default Ember.Service.extend({
   logout() {
     this.set('currentUser', null);
     this.get('cookies').clear('currentUserId');
+    Ember.getOwner(this).lookup('router:main').transitionTo('login');
+
   },
   init() {
     this._super(...arguments);
