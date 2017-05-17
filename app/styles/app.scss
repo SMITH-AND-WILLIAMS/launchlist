@@ -1,4 +1,5 @@
 @import 'normalize';
+
 *{
     box-sizing: border-box;
     outline:none;
@@ -40,8 +41,10 @@ left:-5px;
   filter: blur(8px) sepia(55%) grayscale(15%);
 
 }
+
 //LOGIN PAGE
 #formLogin{
+
 
      background:rgba(255,255,255,.55);
      border-radius:3px;
@@ -49,7 +52,10 @@ left:-5px;
     width:310px;
     margin:25vh auto 0;
     text-align:center;
-     
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: white!important;
+} 
     h1{
         border:1px solid #333;
            border-radius:2px;
@@ -180,9 +186,34 @@ left:-5px;
     }
 
 }
+.message{
+    width:550px;
+    height:150px;
+    background:white;
+    margin:auto;
+    position:absolute;
+    top:10%;
+    left: 0;
+    right: 0;
+  
+}
 .alert-danger{
-    color:red;
+   background:#D45659;
+   color:white;
+   font-size:14px;padding:20px;
 }
 .alert-success{
-    color:green;
+    
+     background:#56d4a6;
+   color:white;
+   font-size:14px;padding:20px;
+}
+
+#nav-bar{
+    background:white;
+    margin:0;
+    color:#555;
+ a{
+    color:#333;
+}
 }

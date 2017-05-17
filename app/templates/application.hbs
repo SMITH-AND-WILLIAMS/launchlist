@@ -1,7 +1,7 @@
 {{nav-bar}}
 <div class="flash-messages">
   {{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
+ <div class="message">{{flash-message flash=flash}}</div> 
   {{/each}}
 </div>
 {{outlet}}
