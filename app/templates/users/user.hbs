@@ -1,9 +1,4 @@
+<h3>{{model.name}} 's dashboard</h3>
 
-<h3>Lists of {{model.name}}</h3>
-{{#each model.lists as |list|}}
-<ul>
-    <li>{{#link-to 'users.user.list' list.id}}<button>{{list.name}}</button>{{/link-to}}</li>
-</ul>
-{{/each}}
-<hr>
+{{#link-to 'users.user.lists'}}Todo's List{{/link-to}}<br />
 {{outlet}}

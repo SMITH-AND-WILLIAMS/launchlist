@@ -7,12 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('users', function() {
-    this.route('user', {path:':user_id'}, function() {
-      this.route('list', {path:'/list/:list_id'}, function() {});
+  this.route('login');
+  this.route('users',function(){
+    this.route('user', {path : ':user_id'}, function() {
+      this.route('lists', function() {});
+      this.route('list', {path : '/lists/:list_id'}, function() {});
+      this.route('tasks', {path : '/lists/:list_id/tasks'}, function() {});
     });
   });
-  this.route('login');
+
+  this.route('user', function() {});
 });
 
 export default Router;
