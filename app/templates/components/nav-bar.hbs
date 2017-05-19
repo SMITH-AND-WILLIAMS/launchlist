@@ -5,7 +5,7 @@
 {{#if session.currentUser}}
    <span class="pull-right"> Your are logged in as {{session.currentUser.name}} || <a href="#" {{action 'logout'}}>logout</a></span>
 {{else}}
-<span class="pull-right">{{#link-to 'login'}}Login {{/link-to}}</span>
+<span class="pull-right">{{#link-to 'application'}}Login {{/link-to}}</span>
 {{/if}}
 </div>
 

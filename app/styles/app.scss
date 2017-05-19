@@ -220,3 +220,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .badge{
     color:red;
 }
+.task-done{
+    color: grey;
+    text-decoration:line-through;;
+}

@@ -1,14 +1,9 @@
 <h3>model.name</h3>
 <ul>
 {{#each model.tasks as |task|}}
-<li>
-{{task.action}}
-{{#if task.done}}
-<input type="checkbox" value="true" checked />
-{{else}}
-<input type="checkbox" value="true" />
-{{/if}}
-
+<li class="{{if task.done 'task-done' ''}} ">
+    {{task.action}}
+    {{one-way-checkbox task.done update=(action 'toggleTaskStatus' task)}}
 </li>
 {{/each}}
 </ul>
