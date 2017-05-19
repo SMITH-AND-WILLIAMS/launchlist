@@ -1,4 +1,12 @@
-<h3>model.name</h3>
+<h3>{{model.name}}</h3>
+<p> {{one-way-input 
+        value
+        type="text" 
+        id="task_input"
+        keyEvents=(hash
+            13=(action "addTask")
+        )
+    }}</p>
 <ul>
 {{#each model.tasks as |task|}}
 <li class="{{if task.done 'task-done' ''}} ">
