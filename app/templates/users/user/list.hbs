@@ -1,7 +1,8 @@
 <h3>{{model.name}}</h3>
-<p> {{one-way-input 
+<p> {{one-way-input
         value
-        type="text" 
+        type="text"
+        update=( action (mut taskString))
         id="task_input"
         keyEvents=(hash
             13=(action "addTask")
@@ -10,8 +11,7 @@
 <ul>
 {{#each model.tasks as |task|}}
 <li class="{{if task.done 'task-done' ''}} ">
-    {{task.action}}
-    {{one-way-checkbox task.done update=(action 'toggleTaskStatus' task)}}
+    {{todo-task task=task}}
 </li>
 {{/each}}
 </ul>
