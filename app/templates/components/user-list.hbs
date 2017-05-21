@@ -1,0 +1,6 @@
+{{#link-to 'users.user.list' list.id}}
+    <li>{{list.name}}
+      <span class="green">{{tasksNotDone.length}}</span>
+        <span class="badge">{{list.tasks.length}}</span>
+    </li>
+  {{/link-to}}
