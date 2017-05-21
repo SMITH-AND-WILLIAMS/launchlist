@@ -1,6 +1,6 @@
-{{#link-to 'users.user.list' list.id}}
-    <li>{{list.name}}
+    <li>
+     {{#link-to 'users.user.list' list.id}} {{list.name}}  {{/link-to}}
       <span class="green">{{tasksNotDone.length}}</span>
         <span class="badge">{{list.tasks.length}}</span>
+         <button {{action 'deleteList' list}}>delete</button>
     </li>
-  {{/link-to}}

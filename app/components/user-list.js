@@ -5,5 +5,10 @@ export default Ember.Component.extend({
     tasks: Ember.computed(function() {
         return this.get('list').get('tasks')
     }),
-    tasksNotDone: Ember.computed.filterBy('tasks', 'done', false)
+    tasksNotDone: Ember.computed.filterBy('tasks', 'done', false),
+    actions: {
+        deleteList(list) {
+            list.destroyRecord();
+        }
+    }
 })

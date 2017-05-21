@@ -1,3 +1,12 @@
+<p> {{one-way-input
+        value
+        type="text"
+        update=( action (mut taskString))
+        id="list_input"
+        keyEvents=(hash
+            13=(action "addList")
+        )
+    }}</p>
 <ul>
 {{#each model as |list|}}
     {{user-list list=list}}
